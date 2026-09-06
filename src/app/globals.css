@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "@fontsource/space-mono/400.css";
+@import "@fontsource/space-mono/700.css";
+@import "@fontsource/special-elite/400.css";
+
+:root {
+  --desk: #1e1b18;
+  --desk-hatch: #241f1b;
+  --paper: #f2ecdd;
+  --paper-dim: #e7dfc9;
+  --ink: #2a2622;
+  --ink-faint: #8c8577;
+  --stamp-red: #a8402f;
+  --carbon-blue: #2e5266;
+
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-stamp: "Special Elite", "Space Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--desk);
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--desk-hatch) 0px,
+    var(--desk-hatch) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  color: var(--paper);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--stamp-red);
+  color: var(--paper);
+}
+
+/* Torn paper edge, used above/below a receipt card. Flip 180deg for the top. */
+.torn-edge {
+  height: 14px;
+  width: 100%;
+  background-color: var(--paper);
+  background-image: linear-gradient(135deg, var(--desk) 10px, transparent 0),
+    linear-gradient(225deg, var(--desk) 10px, transparent 0);
+  background-position: 0 0;
+  background-size: 20px 20px;
+  background-repeat: repeat-x;
+}
+
+.receipt-card {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+a {
+  color: var(--carbon-blue);
+}
+
+.footer-note {
+  color: var(--paper-dim);
+}
+.footer-note a {
+  color: #8fb9c9;
+  text-decoration-color: #8fb9c9;
+}
+.footer-note a:hover {
+  color: var(--paper);
+}
+
+textarea,
+input,
+select {
+  font-family: var(--font-mono);
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: 2px solid var(--carbon-blue);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--carbon-blue);
+  outline-offset: 2px;
+}
+
+/* highlight.js token colors, tuned to the carbon/ink palette instead of a stock theme */
+.hljs {
+  color: var(--ink);
+  background: transparent;
+}
+.hljs-comment,
+.hljs-quote {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-type {
+  color: var(--stamp-red);
+}
+.hljs-string,
+.hljs-attr,
+.hljs-template-tag {
+  color: var(--carbon-blue);
+}
+.hljs-number,
+.hljs-symbol {
+  color: #7a5230;
+}
+.hljs-title,
+.hljs-name,
+.hljs-section {
+  color: var(--ink);
+  font-weight: 700;
+}
+.hljs-variable,
+.hljs-attribute {
+  color: #5b6f2e;
+}
