@@ -6,6 +6,12 @@ A minimal pastebin: paste text or code, get back a shareable link. No account re
 
 Themed like a receipt printer, every paste is a torn-off "slip" with an order number, a print timestamp, and (optionally) an expiry stamp.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/979f2e3c-daf3-461b-a257-8e63632f03c3" height="300" alt="Visual overview of the create page" />
+  <img src="https://github.com/user-attachments/assets/49e230eb-b145-4c9d-a8b9-a818574f9593" height="300" alt="Visual overview of the receipt page" />
+  <p><sub>Figure: Create page and Receipt page</sub></p>
+</div>
+
 **Features**
 - Share text/code snippets via a short link (`/p/ABCD-1234`)
 - Syntax highlighting for ~20 common languages
