@@ -90,17 +90,6 @@ tests/
   setup.ts                      # resets DB/rate-limit state between tests
 ```
 
-## Adding this to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/carbonate.git
-git push -u origin main
-```
-
 ## Deploying
 
 Optionally copy `.env.example` to `.env` and set `NEXT_PUBLIC_SITE_URL` to your deployed domain, this makes the generated Open Graph/Twitter share images resolve to the right URL instead of `localhost`. It's not required for the app to work, only for link previews to point at the right host.
